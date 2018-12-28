@@ -32,6 +32,12 @@ public class UserEntity extends BaseEntity{
     private String userLevelId;
 
 
+    @Column
+    private String departmentId;
+
+
+    private Double balance;
+
 
     public String getDepartmentId() {
         return departmentId;
@@ -41,8 +47,7 @@ public class UserEntity extends BaseEntity{
         this.departmentId = departmentId;
     }
 
-    @Column
-    private String departmentId;
+
 
 
 
@@ -82,6 +87,11 @@ public class UserEntity extends BaseEntity{
         this.password = password;
     }
 
+    public Double getBalance() {
+        return balance;
+    }
 
-
+    public void setBalance(Double balance) {
+        this.balance = balance;
+    }
 }
