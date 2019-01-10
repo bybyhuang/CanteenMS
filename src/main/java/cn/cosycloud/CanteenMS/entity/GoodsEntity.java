@@ -1,11 +1,14 @@
 package cn.cosycloud.CanteenMS.entity;
 
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "t_goods")
 public class GoodsEntity extends BaseEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long goodsId;
 
     private String goodsName;

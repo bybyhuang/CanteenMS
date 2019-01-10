@@ -11,11 +11,25 @@
  Target Server Version : 50722
  File Encoding         : 65001
 
- Date: 28/12/2018 21:25:29
+ Date: 10/01/2019 20:14:54
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for t_day_food
+-- ----------------------------
+DROP TABLE IF EXISTS `t_day_food`;
+CREATE TABLE `t_day_food` (
+  `day_food_id` bigint(20) NOT NULL COMMENT '每日菜单id',
+  `goods_id` bigint(20) DEFAULT NULL COMMENT '菜品id',
+  `meal_id` int(11) DEFAULT NULL COMMENT '餐别',
+  `use_time` date DEFAULT NULL COMMENT '对应预定日期',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '更新日期',
+  PRIMARY KEY (`day_food_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for t_department

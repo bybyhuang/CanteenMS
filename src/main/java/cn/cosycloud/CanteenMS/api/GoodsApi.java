@@ -3,6 +3,7 @@ package cn.cosycloud.CanteenMS.api;
 
 import cn.cosycloud.CanteenMS.common.until.ApiResponse;
 import cn.cosycloud.CanteenMS.entity.MealTypeEntity;
+import cn.cosycloud.CanteenMS.repository.GoodsRepository;
 import cn.cosycloud.CanteenMS.repository.MealRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,10 @@ public class GoodsApi {
 
     @Autowired
     private MealRepository mealRepository;
+
+    @Autowired
+    private GoodsRepository goodsRepository;
+
 
     /*
      * @Author byhuang
@@ -32,6 +37,7 @@ public class GoodsApi {
         return ApiResponse.initSuccess(mealRepositories);
 
     }
+
 
 
 
